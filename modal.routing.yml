@@ -1,0 +1,6 @@
+modal.test_modal_form:
+  path: '/modal/test-form'
+  defaults:
+    _form: '\Drupal\modal\Form\TestModalForm'
+  requirements:
+      _access: 'TRUE'

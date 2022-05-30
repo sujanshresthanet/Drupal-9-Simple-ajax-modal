@@ -1,0 +1,11 @@
+name: Simple ajax modal
+type: module
+description: 'The example module to to display result in popup modal'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Custom Modules'
+
+# Information added by Drupal.org packaging script on 2022-05-30
+version: '8.x-1.0'
+project: 'business_address'
+datestamp: 1653931149

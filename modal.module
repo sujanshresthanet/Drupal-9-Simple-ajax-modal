@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Contains modal.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\entity\Entity\EntityViewDisplay;
+
+
+/**
+ * Implements hook_help().
+ */
+function modal_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the modal module.
+    case 'help.page.modal':
+    $output = '';
+    $output .= '<h3>' . t('About') . '</h3>';
+    $output .= '<p>' . t('Example popup modal') . '</p>';
+    return $output;
+
+    default:
+  }
+}
+function modal_preprocess_html(&$variables) {
+  $variables['page']['#attached']['library'][] = 'modal/modal';
+  $variables['page']['#attached']['library'][] = 'core/drupal.ajax';
+}
